@@ -1,0 +1,164 @@
+
+.upper {
+  overflow-y: auto;
+  min-height: 100vh;
+  background: #f3f4f6;
+  padding-bottom: 3rem;
+}
+
+.mainCont {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 2.5rem;
+  background: linear-gradient(90deg, #f97316, #ea500e);
+  color: white;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.25);
+}
+
+.mainCont > h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.mainCont > p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* ---------- Form Container ---------- */
+.formCont > form {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 2rem;
+}
+
+/* ---------- Card Style for Sections ---------- */
+.photo,
+.location,
+.category,
+.description {
+  margin: 1rem 2rem 2rem 2rem;
+  background-color: white;
+  padding: 1.5rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s ease;
+}
+
+.photo > h3,
+.location > h3,
+.category > h3,
+.description > h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.photoInput {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eef2ff;
+  border: 2px dashed #4f46e5;
+  border-radius: 16px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+}
+
+
+.imgCont {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.imgCont > img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.inputField {
+    width:100%;
+    padding:0.75rem 0.25rem ;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.inputField:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.formCont > form > button {
+  margin: 1.5rem 3rem;
+  padding: 0.9rem 1.3rem;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(90deg, #16a34a, #22c55e);
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+  .mainCont > h1 {
+    font-size: 1.5rem;
+  }
+
+  .mainCont > p {
+    font-size: 1rem;
+  }
+
+  .photo,
+  .location,
+  .category,
+  .description {
+    padding: 1rem 1.2rem;
+    margin: 0.8rem 0 1.5rem 0;
+  }
+
+  .photoInput {
+    padding: 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .imgCont > img {
+    height: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .formCont > form {
+    padding: 1rem;
+  }
+
+  .formCont > form > button {
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+    max-width: 100%;
+  }
+
+  .photo,
+  .location,
+  .category,
+  .description {
+    border-radius: 14px;
+  }
+
+  .mainCont {
+    padding: 1.5rem;
+  }
+}

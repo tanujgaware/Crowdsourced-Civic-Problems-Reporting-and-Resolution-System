@@ -1,0 +1,166 @@
+.upper{
+  min-height: 100vh;
+}
+.mainCont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background: linear-gradient(90deg, #2563eb, #1d4ed8);
+  color: white;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+.mainCont > h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.mainCont > p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 1.5rem;
+}
+
+.mainCont > button {
+  background: linear-gradient(90deg, #f43f5e, #e63434);
+  border: none;
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mainCont > button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.25);
+}
+
+.mainCont > button > * {
+  color: white;
+  text-decoration: none;
+}
+
+/* ---------- Map Card ---------- */
+.map {
+  background: white;
+  border-radius: 16px;
+  padding: 1.2rem;
+  margin: 1.2rem 1.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.map h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: #1f2937;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 0.5rem;
+}
+
+/* ---------- Recent Issues ---------- */
+.recent {
+  margin: 1.2rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.recent > .heading {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- Issue Cards ---------- */
+.issue {
+  background: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 16px;
+  font-size: 1rem;
+  font-weight: 400;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-left: 6px solid transparent;
+  transition: transform 0.2s ease;
+}
+
+.issue:hover {
+  transform: translateY(-3px);
+}
+
+.location {
+  margin-top: 0.3rem;
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+
+.issueInfo {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+/* ---------- Status Badges ---------- */
+.badge {
+  padding: 0.25rem 0.75rem;  
+  border-radius: 9999px;     
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.badge.resolved {
+  background-color: #dcfce7; 
+  color: #15803d;            
+  border-left-color: #22c55e;
+}
+
+.badge.inProgress {
+  background-color: #dbeafe;
+  color: #1d4ed8;          
+  border-left-color: #3b82f6;
+}
+
+.badge.pending {
+  background-color: #f3f4f6;
+  color: #374151;    
+  border-left-color: #9ca3af;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .mainCont {
+    padding: 1.5rem;
+  }
+
+  .mainCont > h1 {
+    font-size: 1.5rem;
+  }
+
+  .mainCont > p {
+    font-size: 1rem;
+  }
+
+  .map,
+  .recent {
+    margin: 1rem;
+  }
+
+  .issue {
+    padding: 0.9rem;
+  }
+}
